@@ -1,3 +1,6 @@
 theme: jekyll-theme-minimal
 title: "Heartbeato's sandbox"
-description: Bookmark this to keep an eye on my project updates!
+
+# Настройки для локальной разработки
+markdown: kramdown
+permalink: pretty
