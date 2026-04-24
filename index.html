@@ -3,37 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Название вашего продукта | Лендинг</title>
+    <title>Sandbox | RIVI</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Шапка с навигацией -->
-    <header>
-        <div class="container">
-            <div class="logo">Ваш Логотип</div>
-            <!-- <img src="/images/logo-no-tagline.svg"> -->
-            <nav>
-                <a href="#catalogue">Каталог</a>
-                <a href="showrooms">Шоурумы</a>
-                <a href="#buyer">Покупателю</a>
-                <a href="#about">О нас</a>
-                <a href="#designer">Дизайнерам</a>
-                <a href="#project">Проекты</a>
-            </nav>
-            <div class="nav-icons">
-                <img src="/images/16px-Account.svg">
-                <img src="/images/16px-Basket.svg">
-            </div>
-            <div class="nav-location">
-                <img src="/images/16px-Location.svg">
-                <p>Москва</p>
-            </div>
+     <header class="site-header">
+    <!-- 1. Левый контейнер: SVG логотип высотой 28px -->
+    <div class="logo-container">
+        <svg class="logo-svg" viewBox="0 0 87 28" xmlns="http://www.w3.org/2000/svg" style="height:28px; width:auto;">
+            <use xlink:href="/images/logo-no-tagline.svg"></use>
+        </svg>
+    </div>
+
+    <div class="header-right">
+        <!-- 2. Блок навигации (слова: каталог, шоурумы, покупателю, о нас, дизайнерам, проекты) -->
+        <nav aria-label="Основная навигация">
+        <ul class="nav-links">
+            <li><a href="#">каталог</a></li>
+            <li><a href="#">шоурумы</a></li>
+            <li><a href="#">покупателю</a></li>
+            <li><a href="#">о нас</a></li>
+            <li><a href="#">дизайнерам</a></li>
+            <li><a href="#">проекты</a></li>
+        </ul>
+        </nav>
+
+        <!-- 3. Две иконки: профиль и корзина (высота 16px, расстояние 12px) -->
+        <div class="actions-icons">
+        <button class="icon-btn" aria-label="Профиль пользователя">
+            <svg class="icon-svg" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" style="height:16px; width:auto;">
+                <use xlink:href="/images/16px-Account.svg"></use>
+            </svg>
+        </button>
+        <button class="icon-btn" aria-label="Корзина">
+            <svg class="icon-svg" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" style="height:16px; width:auto;">
+                <use xlink:href="/images/16px-Basket.svg"></use>
+            </svg>
+        </button>
         </div>
+
+        <!-- 4. Иконка с меткой + слово "Москва" (расстояние 4px) -->
+        <div class="location-block" role="button" tabindex="0" aria-label="Москва, местоположение">
+        <svg class="icon-svg" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" style="height:16px; width:auto;">
+            <use xlink:href="/images/16px-Location.svg"></use>
+        </svg>
+        <span class="location-text">Москва</span>
+        </div>
+    </div>
     </header>
 
     <!-- Главный экран (Hero) -->
     <section class="hero">
-        <div class="container">
+        <!-- Фоновое видео 16:9 -->
+        <div class="hero-video-wrapper">
+            <video class="hero-video" autoplay loop muted playsinline>
+                <source src="images/vid.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="title-container">
             <p class="subtitle">Придумано и создано в росcии</p>
             <h1>Мебель, которая становится наследием</h1>
         </div>

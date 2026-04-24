@@ -12,62 +12,186 @@ body {
 
 .container {
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 32px;
 }
 
-/* Шапка */
-header {
-    background: white;
-    position: fixed;
+/* ========== ШАПКА ========== */
+.site-header {
     width: 100%;
-    top: 0;
-    z-index: 100;
-}
-
-header .container {
+    padding: 18px 32px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.logo {
-    max-height: 28px;
-    width: auto;  
+/* ---- ЛЕВЫЙ КОНТЕЙНЕР (лого) ---- */
+.logo-container {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
 }
 
-nav a {
-    margin-left: 40px;
-    font-size: 12px;
-    letter-spacing: -1%;
-    text-decoration: none;
+.logo-svg {
+    height: 28px;
+    width: auto;
+    display: block;
+}
+
+/* ---- ПРАВАЯ ГРУППА (3 блока) ---- */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* БЛОК 2: навигация */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: -0.01em;
     text-transform: uppercase;
-    transition: color 0.3s;
     color: #1C1C1C;
+    text-decoration: none;
+    transition: color 0.25s ease;
 }
 
-nav a:hover {
+.nav-links a:hover {
+    color: #9F9D9C;
+}
+
+/* БЛОК 3: иконки профиль + корзина */
+.actions-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon-svg {
+    height: 16px;
+    width: auto;
+    color: #1C1C1C; /* Базовый цвет иконок */
+    transition: color 0.25s ease;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.icon-btn:hover .icon-svg {
+    color: #9F9D9C; /* Цвет при наведении */
+}
+
+/* БЛОК 4: Москва */
+.location-block {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px; /* расстояние 4px между иконкой и текстом */
+    cursor: pointer;
+    color: #1C1C1C; /* базовый цвет */
+    transition: color 0.25s ease;
+}
+
+/* Иконка наследует цвет от родителя */
+.location-block .icon-svg {
+    height: 16px;
+    width: auto;
+    color: inherit; /* наследует цвет от .location-block */
+    transition: inherit; /* наследует transition */
+}
+
+/* Текст наследует цвет от родителя */
+.location-text {
+    color: inherit; /* наследует цвет от .location-block */
+    transition: inherit; /* наследует transition */
+    line-height: 1; /* для вертикального выравнивания */
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* При наведении на блок меняется цвет всего содержимого */
+.location-block:hover {
     color: #9F9D9C;
 }
 
 /* Hero секция */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
     color: white;
-    text-align: center;
-    padding: 150px 0 100px;
-    margin-top: 60px;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+/* Контейнер для видео 16:9 с боковыми отступами 32px */
+.hero-video-wrapper {
+    position: relative;
+    width: calc(100% - 64px); /* 100% - (32px слева + 32px справа) */
+    max-width: calc(100% - 64px);
+    margin: 0 auto; /* Центрирование с учётом отступов */
+}
+
+/* Соотношение 16:9 через padding-bottom */
+.hero-video-wrapper::before {
+    content: '';
+    display: block;
+    padding-bottom: 56.25%; /* 9 / 16 = 0.5625 */
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Видео покрывает всю область, сохраняя пропорции */
+    display: block;
+}
+
+/* Контейнер с текстом поверх видео */
+.hero .title-container {
+    position: absolute;
+    bottom: 32px;  /* Отступ снизу 48px от нижней границы видео */
+    left: 64px;
+    max-width: 100%;
+    z-index: 2;
 }
 
 .hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+    line-height: 1;
+    font-size: 2.375rem;
+    font-weight: 300;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
 }
 
-.subtitle {
-    font-size: 20px;
-    margin-bottom: 30px;
-    opacity: 0.9;
+.hero .subtitle {
+    line-height: 1;
+    padding-bottom: 8px; 
+    font-size: 0.750rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
 }
 
 /* Кнопки */
