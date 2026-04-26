@@ -57,6 +57,7 @@
     <section class="hero">
         <!-- Фоновое видео 16:9 -->
         <div class="hero-video-wrapper">
+            <!-- <video class="hero-video" autoplay loop muted playsinline></video> -->
             <video class="hero-video" autoplay loop muted playsinline>
                 <source src="images/vid.mp4" type="video/mp4">
             </video>
@@ -64,125 +65,111 @@
 
         <div class="title-container">
             <p class="subtitle">Придумано и создано в росcии</p>
-            <h1>Мебель, которая становится наследием</h1>
+            <h1>Мебель, которая становится&nbsp;наследием</h1>
         </div>
     </section>
 
-    <!-- Преимущества -->
-    <section id="benefits" class="benefits">
-        <div class="container">
-            <h2>Почему выбирают нас</h2>
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <img src="images/icons/speed.svg" alt="Скорость">
-                    <h3>Быстро</h3>
-                    <p>Описание преимущества</p>
-                </div>
-                <div class="benefit-item">
-                    <img src="images/icons/quality.svg" alt="Качество">
-                    <h3>Качественно</h3>
-                    <p>Описание преимущества</p>
-                </div>
-                <div class="benefit-item">
-                    <img src="images/icons/support.svg" alt="Поддержка">
-                    <h3>Поддержка 24/7</h3>
-                    <p>Описание преимущества</p>
-                </div>
+    <!-- Блок новинок -->
+    <section class="novelties">
+        <h2 class="novelties__title">Новые модели</h2>
+        
+        <div class="image-grid">
+            <!-- Первая картинка -->
+            <div class="image-card">
+                <a href="/collection/circle" class="image-card__link">
+                    <img src="images/circle.png" alt="Коллекция Circle" class="image-card__image">
+                    <div class="image-card__overlay"></div>
+                    <div class="image-card__content">
+                        <div class="collection-label">Коллекция</div>
+                        <div class="collection-name">Circle</div>
+                        <div class="details-button">Подробнее</div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Вторая картинка -->
+            <div class="image-card">
+                <a href="/collection/gummy" class="image-card__link">
+                    <img src="images/gummy.png" alt="Коллекция Gummy" class="image-card__image">
+                    <div class="image-card__overlay"></div>
+                    <div class="image-card__content">
+                        <div class="collection-label">Коллекция</div>
+                        <div class="collection-name">Gummy</div>
+                        <div class="details-button">Подробнее</div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- О продукте -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>Что вы получите</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Подробное описание вашего продукта или услуги</p>
-                    <ul>
-                        <li>Ключевая выгода №1</li>
-                        <li>Ключевая выгода №2</li>
-                        <li>Ключевая выгода №3</li>
-                    </ul>
-                </div>
-                <div class="about-image">
-                    <img src="images/product.png" alt="Продукт">
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Цены -->
-    <section id="prices" class="prices">
-        <div class="container">
-            <h2>Выберите свой тариф</h2>
-            <div class="price-grid">
-                <div class="price-card">
-                    <h3>Базовый</h3>
-                    <div class="price">1000 ₽</div>
-                    <ul>
-                        <li>Возможность 1</li>
-                        <li>Возможность 2</li>
-                    </ul>
-                    <button class="btn btn-secondary">Выбрать</button>
-                </div>
-                <div class="price-card featured">
-                    <h3>Оптимальный</h3>
-                    <div class="price">2500 ₽</div>
-                    <ul>
-                        <li>Возможность 1</li>
-                        <li>Возможность 2</li>
-                        <li>Возможность 3</li>
-                    </ul>
-                    <button class="btn btn-primary">Выбрать</button>
-                </div>
-                <div class="price-card">
-                    <h3>VIP</h3>
-                    <div class="price">5000 ₽</div>
-                    <ul>
-                        <li>Возможность 1</li>
-                        <li>Возможность 2</li>
-                        <li>Возможность 3</li>
-                        <li>Возможность 4</li>
-                    </ul>
-                    <button class="btn btn-secondary">Выбрать</button>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Форма захвата -->
-    <section class="form-section">
-        <div class="container">
-            <h2>Оставьте заявку</h2>
-            <p>Мы свяжемся с вами в течение 15 минут</p>
-            <form id="contactForm">
-                <input type="text" placeholder="Ваше имя" required>
-                <input type="tel" placeholder="Телефон" required>
-                <input type="email" placeholder="Email">
-                <button type="submit" class="btn btn-primary">Отправить</button>
-            </form>
-        </div>
-    </section>
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <!-- Левая часть с логотипом и тремя столбцами -->
+            <div class="footer-left">
+                <!-- Три колонки с контентом -->
+                <div class="footer-columns">
+                    <!-- Колонка 1: Коллекции -->
+                    <div class="footer-col">
+                        <h3>Коллекции</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Circle</a></li>
+                            <li><a href="#">Harvey</a></li>
+                            <li><a href="#">James</a></li>
+                            <li><a href="#">Gigi</a></li>
+                            <li><a href="#">Goodman</a></li>
+                            <li><a href="#">Ruby</a></li>
+                            <li><a href="#">Charm</a></li>
+                            <li><a href="#">Gummy</a></li>
+                            <li><a href="#">Linda</a></li>
+                        </ul>
+                    </div>
 
-    <!-- Футер -->
-    <footer id="contacts">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">Ваш Логотип</div>
-                <div class="contacts">
-                    <p>Email: info@example.com</p>
-                    <p>Телефон: +7 (999) 123-45-67</p>
-                    <div class="social-links">
-                        <a href="#">Telegram</a>
-                        <a href="#">WhatsApp</a>
+                    <!-- Колонка 2: Каталог -->
+                    <div class="footer-col">
+                        <h3>Каталог</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Кровати</a></li>
+                            <li><a href="#">Стулья</a></li>
+                            <li><a href="#">Столы</a></li>
+                            <li><a href="#">Консоли</a></li>
+                            <li><a href="#">Комоды</a></li>
+                            <li><a href="#">Тумбы</a></li>
+                            <li><a href="#">Шкафы</a></li>
+                            <li><a href="#">Столики</a></li>
+                            <li><a href="#">ТВ-тумбы</a></li>
+                            <li><a href="#">Витрины</a></li>
+                            <li><a href="#">Стеллажи</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Колонка 3: Журнал -->
+                    <div class="footer-col">
+                        <h3>Журнал</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Блог</a></li>
+                            <li><a href="#">Портфолио</a></li>
+                            <li><a href="#">Для HoReCa</a></li>
+                            <li><a href="#">О компании</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="copyright">© 2026 Все права защищены</div>
+
+            <!-- Правая часть: квадратное изображение 1:1 высотой 21.667vw и подпись -->
+            <div class="footer-right">
+                <img class="footer-image" 
+                     src="https://placehold.co/400x400/3a3a3a/d0d0d0?text=КАТАЛОГ МЕБЕЛИ" 
+                     alt="Каталог мебели 2026"
+                     style="height: 21.667vw; width: auto; max-width: 100%;"
+                     loading="lazy">
+                <div class="footer-caption">Каталог мебели 2026</div>
+            </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
 </body>
 </html>
