@@ -1,6 +1,0 @@
-theme: jekyll-theme-minimal
-title: "Heartbeato's sandbox"
-
-# Настройки для локальной разработки
-markdown: kramdown
-permalink: pretty
