@@ -1,3 +1,0 @@
-new Kursor({
-  removeDefaultCursor: true
-})
